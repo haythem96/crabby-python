@@ -5,17 +5,17 @@ Add these envs to .env file
 Ropsten:
 
 ```
-export PRIVATE_KEY=****
-export AUCTION_URL=http://beta.squeethportal.xyz/
-export CHAIN_ID=1
+PRIVATE_KEY=**** 
+AUCTION_URL=https://beta-squeeth-portal-ropsten.vercel.app/
+CHAIN_ID=3
 ```
 
 Mainnet:
 
 ```
-export PRIVATE_KEY=***
-export AUCTION_URL=https://beta-squeeth-portal-ropsten.vercel.app/
-export CHAIN_ID=3
+PRIVATE_KEY=***
+AUCTION_URL=http://beta.squeethportal.xyz/
+CHAIN_ID=1
 ```
 
 Install requirement

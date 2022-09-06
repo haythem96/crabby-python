@@ -1,12 +1,15 @@
 import os
-from web3.auto import w3
-from eth_account.messages import encode_structured_data
 import requests
 import time
+from dotenv import load_dotenv
+from web3.auto import w3
+from eth_account.messages import encode_structured_data
 
-NETWORK = int(os.environ.get("CHAIN_ID"))
-AUCTION_URL = os.environ.get("AUCTION_URL")
-PRIVATE_KEY = os.environ.get("PRIVATE_KEY")
+load_dotenv()
+
+NETWORK = int(os.getenv("CHAIN_ID"))
+AUCTION_URL = os.getenv("AUCTION_URL")
+PRIVATE_KEY = os.getenv("PRIVATE_KEY")
 CURRENT_ACCOUNT = w3.eth.account.privateKeyToAccount(PRIVATE_KEY)
 
 print("Using address: ", CURRENT_ACCOUNT.address)
@@ -115,7 +118,6 @@ def delete_bid(user_bid: str):
 
 
 auctionObj = get_latest_auction()
-
 
 auction = auctionObj['auction']
 bidId = auction['currentAuctionId']
